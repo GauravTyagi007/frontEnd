@@ -1,0 +1,87 @@
+<section class="text-center">
+  <div class="p-5 bg-image background" ></div>
+    <div class="card shadow-5-strong " style="
+         margin-top: 5%;
+         margin-left: 250px;
+         margin-right: 250px;
+        
+            background: hsla(0, 0%, 100%, 0.3);
+            backdrop-filter: blur(30px);
+            color:rgb(241, 240, 236) ;
+            
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-5" style="color:white;">Sign Up Here!!</h2>
+            <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
+              <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text"
+              name="name" 
+              #name="ngModel" 
+              ngModel 
+               class="form-control" 
+               id="exampleInputEmail1"
+              aria-describedby="emailHelp" 
+              minlength="3" 
+              maxlength="20"
+              required>
+              <span *ngIf="name.invalid && name.touched" style="color:rgb(6, 212, 248);">
+                Plese enter a valid name </span>
+              </div>
+              <div class="form-group">
+              <label for="exampleInputPassword1">Email</label>
+              <input type="text"
+               ngModel 
+               name="email"
+                #email="ngModel" 
+                required
+               class="form-control" 
+               id="exampleInputPassword1">
+              <span *ngIf="email.invalid && email.touched" style="color:rgb(6, 212, 248);">
+                Plese enter a valid email </span>
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" 
+                  ngModel 
+                  name="password" 
+                  #password="ngModel"
+                  class="form-control" 
+                  id="exampleInputPassword1"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" 
+                  required>
+                  <span *ngIf="password.invalid && password.touched" style="color:rgb(6, 212, 248);">
+                  Plese enter a valid password </span>
+                 </div>
+          <div class="form-group form-outline mb-4" >
+            <label for="exampleInputPassword1">Role</label>
+                    <select class="form-control" 
+                    ngModel 
+                    id="role" 
+                    name="role" 
+                     #role="ngModel" 
+                     placeholder="Enter the role">
+                      <optgroup label="enter role" >
+                        <option >staff</option>
+                        <option >manager</option>
+                      </optgroup>
+                      </select>
+                </div>
+                
+              <button [disabled]=!regForm.valid type="submit" class="btn btn-success">Submit</button>
+              </form>
+          </div>
+          <div class="col-lg-8 px-md-5 pt-4" >
+            <h6>Already a user ?</h6>
+            <button routerLink="../login" type="submit" class="button btn btn-primary" style="width: 15%;">
+              Login In
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

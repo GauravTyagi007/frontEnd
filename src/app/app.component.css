@@ -1,0 +1,8 @@
+.background{
+    background-image: url("https://img.freepik.com/free-vector/cartoon-indian-restaurant-background_52683-69329.jpg?w=1380&t=st=1663419111~exp=1663419711~hmac=7b10a53750431cc70ddcbf90dd2e38070137ba58e1346c015f738dc6f5e1e9e8");
+    position: fixed; 
+top: -50%; 
+left: -50%; 
+width: 200%; 
+height: 200%;
+}

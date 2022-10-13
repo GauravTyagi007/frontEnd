@@ -1,0 +1,61 @@
+<section class="text-center">
+  <div class="p-5 bg-image background"></div>
+  <div
+    class="card mx-4 mx-md-5 shadow-5-strong"
+    style="
+      margin-top: -50px;
+      background: hsla(0, 0%, 100%, 0.3);
+      backdrop-filter: blur(30px);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    "
+  >
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-12">
+         
+          <!-- <div class="row">
+              <div class="col md-2"><button type="button" style="color: black;" class="btn btn-outline-secondary" (click)="getNotCompleted()">IN PROGRESS</button></div> 
+             <div class="header"> 
+              ORDERS ARE HERE
+            </div> 
+            <div class="col md-2"><button type="button" style="color: black;" class="btn btn-outline-secondary" (click)="getCompleted()">ORDERS</button></div>
+      
+        </div>
+           -->
+            
+    
+    <div class="inside-order" >
+      
+            <table class="table">
+              <thead>
+        
+                <tr>
+                   <th scope="col">ID</th> 
+                
+                  <th scope="col">Total Price</th>
+                  <th scope="col">&nbsp;&nbsp;Created Time</th>
+                   <th scope="col">Delivery Time</th> 
+                  <th scope="col">Customer Name</th>
+                  <th scope="col">Customer Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <tr *ngFor="let r of result">
+                   <td class="res">{{r.id}}</td> 
+                    
+                  <td class="res">{{r.totalPrice}}</td>
+                  <td class="res">{{r.orderCreatedTime}}</td>
+                   <td class="res">{{r.orderDeliveryTime}}</td>  
+                  <td class="res">{{r.customerName}}</td>
+                  <td class="res">{{r.contactNumber}}</td>
+               </tr>
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+.list-group-item{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 900;
+    font-size:large;
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card-header{
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 900;
+    font-style: normal;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    
+    
+}
+

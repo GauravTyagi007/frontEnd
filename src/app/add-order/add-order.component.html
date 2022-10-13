@@ -1,0 +1,72 @@
+<section class="text-center">
+  <div class="p-5 bg-image background"></div>
+  <div
+    class="card  shadow-5-strong"
+    style="
+        margin-right: 18%;
+        margin-left: 18%;
+      background: hsla(0, 0%, 100%, 0.1);
+      backdrop-filter: blur(30px);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    "
+  >
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5" style="color: white;" >
+            Let's Create New Order
+          </h2>
+          <form #addData="ngForm" (ngSubmit)="addOrder(addData)">
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    ngModel
+                    id="customerName"
+                    name="customerName"
+                    #customerName="ngModel"
+                    placeholder="Enter the CustomerName"
+                    required
+                  />
+                  <span *ngIf="customerName.invalid && customerName.touched" style="color:rgb(6, 212, 248);">
+                    Plese enter a Valid Name </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                ngModel
+                id="contactNumber"
+                name="contactNumber"
+                #contactNumber="ngModel"
+                placeholder="Enter the  contactNumber"
+              />
+            </div>
+
+            <!-- Submit button -->
+            <div class="col text-center">
+              <button
+              [disabled]=!addData.valid
+                type="submit"
+                class="btn btn-primary"
+                style="width: 20%"
+              >
+                Create Order
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

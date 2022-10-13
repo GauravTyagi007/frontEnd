@@ -1,0 +1,48 @@
+<div style="margin-top:3cm ;">
+
+    <div *ngIf="staff" class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;" >
+      <div class="card-header header">Create New Order</div>
+      <div class="card-body text-dark ">
+        <p class="card-text">Create new customer order and send for delivery</p>
+        <button   routerLink="../add-order" class="btn btn btn-primary">Create</button>
+      </div>
+    </div>
+    <div *ngIf="manager" class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;">
+      <div class="card-header header">Menu</div>
+      <div class="card-body">
+          <p class="card-text">All of your food products will be shown here</p>
+        <button routerLink="../menu" class="btn btn btn-primary">View Menu</button>
+      </div>
+    </div>
+    <div class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;" >
+      <div class="card-header header">Orders</div>
+      <div class="card-body">
+          <p class="card-text">Checkout all the Orders Made till now</p>
+        <button  routerLink="../orders" class="btn btn btn-primary">View Orders</button>
+      </div>
+    </div>
+    
+  </div>
+  <div>
+      <div *ngIf="manager" class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;" >
+          <div class="card-header header">Modify Menu</div>
+          <div class="card-body text-dark ">
+            <p class="card-text">Modity your menu products and the details</p>
+            <button routerLink="../add_products" class="btn btn btn-primary">Modify</button>
+        </div>
+        </div>
+        <div *ngIf="manager" class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;">
+          <div class="card-header header">Show Employees</div>
+          <div class="card-body">
+              <p class="card-text">Check out your branch Employees and their Details</p>
+            <button    routerLink="../staff" class="btn btn btn-primary">View</button>
+          </div>
+        </div>
+        <div class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;">
+          <div class="card-header header">Settings</div>
+          <div class="card-body text-dark ">
+            <p class="card-text">Change your current Login Password here </p>
+            <button routerLink="../settings"   class="btn btn btn-primary">Go To Settings</button>
+          </div>
+        </div>
+      </div>   

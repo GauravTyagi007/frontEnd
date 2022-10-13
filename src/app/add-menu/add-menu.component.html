@@ -1,0 +1,54 @@
+<section class="text-center">
+  <div class="p-5 bg-image background"></div>
+  <div
+    class="card mx-5 mx-md-5 shadow-5-strong"
+    style="
+      margin-top: -90px;
+      background: hsla(0, 0%, 100%, 0.3);
+      backdrop-filter: blur(30px);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    "
+  >
+    <div class="card-body py-10 px-md-5" *ngIf="isLoading">
+      <div class="col d-flex justify-content-center">
+        <div
+          class="col-lg-10"
+          style="
+            background-color: rgb(233, 231, 240);
+            margin-right: 15px;
+            border-radius: 7px;
+          "
+        >
+          <h3 class="fw-bold mb-5" style="padding-top: 10px">Menu</h3>
+          <hr style="margin-top: -40px" />
+          <div class="inside-menu">
+            <table class="table table-borderless">
+              <tbody>
+                <tr *ngFor="let r of result">
+                  <ul style="list-style: none">
+                    <div class="head">
+                      <li>
+                        <td>
+                          <h5>{{ r.name }}</h5>
+                        </td>
+                      </li>
+                    </div>
+                    <div class="nm">{{ r.price }}/Rs.</div>
+                    <div class="name">
+                      <li>{{ r.type }}</li>
+                      <li>{{r.about}}</li>
+                    </div>
+                    <hr />
+                  </ul>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <button routerLink="../add_products" class="btn btn-primary">Modify Menu</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,146 @@
+<section class="text-center">
+  <div class="p-5 bg-image background"></div>
+  <div
+    class="card mx-5 mx-md-5 shadow-5-strong"
+    style="
+      margin-top: -90px;
+      background: hsla(0, 0%, 100%, 0.3);
+      backdrop-filter: blur(30px);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    "
+    *ngIf="isLoading"
+  >
+  <h2 class="fw-bold mb-5" style="color: whitesmoke;">Modify Menu Here</h2>
+    <div class="card-body py-10 px-md-5">
+      <div class="col d-flex justify-content-center" style="margin-top: -40px;">
+        <div
+          class="col-lg-6"
+          style="
+            background-color: rgb(233, 231, 240);
+            margin-right: 40px;
+            border-radius: 7px;
+          "
+        >
+        <h3 class="fw-bold mb-5" style="padding-top: 10px">Enter Product Details</h3>
+          <hr style="margin-top: -40px" />
+          <form  #Data="ngForm" style="margin-top:50px ;" (ngSubmit)="addProdut(Data)">
+            <div class="form-group form-outline mb-4">
+              <input
+                type="text"
+                class="form-control"
+                ngModel
+                id="name"
+                name="name"
+                #name="ngModel"
+                placeholder="Enter Product Name"
+                required
+              />
+               <span *ngIf="name.invalid && name.touched" style="color:red;">
+                Plese enter a valid name </span>
+            </div>
+            <!-- Email input -->
+            <div class="form-group form-outline mb-4">
+              <input
+                type="text"
+                class="form-control"
+                ngModel
+                id="type"
+                name="type"
+                #type="ngModel"
+                placeholder="Enter Type"
+                required
+              />
+               <span *ngIf="type.invalid && type.touched" style="color:red;">
+                Plese enter a type  </span>
+            
+            </div>
+
+            <!-- Password input -->
+            <div class="form-group form-outline mb-4">
+              <input
+                type="text"
+                class="form-control"
+                ngModel
+                id="about"
+                name="about"
+                #about="ngModel"
+                placeholder="Enter something about product"
+                required
+              />
+              <span *ngIf="about.invalid && about.touched" style="color:red;">
+                Plese enter the Description</span>
+            </div>
+            <div class="form-group form-outline mb-4">
+              <input
+                type="text"
+                class="form-control"
+                ngModel
+                id="price"
+                name="price"
+                #price="ngModel"
+                placeholder="Enter Price"
+                required
+              />
+              <span *ngIf="price.invalid && price.touched" style="color:red;">
+                Plese enter the Price</span>
+            </div>
+            <div class="col text-center">
+              <button
+
+                [disabled]=!Data.valid
+                type="submit"
+                class="btn btn-success"
+                style="margin-top: 20px;"
+              >
+                Add Product
+              </button>
+            </div>
+          </form>
+        </div>
+        <div
+          class="col-lg-6"
+          style="
+            background-color: rgb(233, 231, 240);
+            margin-right: 15px;
+            border-radius: 7px;
+          "
+        >
+          <h3 class="fw-bold mb-5" style="padding-top: 10px">Menu</h3>
+          <hr style="margin-top: -40px" />
+          <div class="inside-menu">
+            <table class="table table-borderless">
+              <tbody>
+                <tr *ngFor="let r of result">
+                  <ul style="list-style: none">
+                    <div class="head">
+                      <li>
+                        <td>
+                          <h5>{{ r.name }}</h5>
+                        </td>
+                      </li>
+                    </div>
+                    <div class="nm">{{ r.price }}/Rs.
+                      <button
+                      (click)="delete_product(r.id)"
+                      class="btn btn-danger"
+                      style="margin-right: 10px;"
+                    >
+                      Delete Product
+                    </button></div>
+                    <div class="name">
+                      <li>{{ r.type }}</li>
+                    </div> 
+                    <hr />
+                  </ul>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <button routerLink="../menu" class="btn btn-primary" style="margin-top: 15px;">Back To Menu</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+
+<section class="text-center">
+  <div class="p-5 bg-image background" ></div>
+  <div class="card  shadow-5-strong" style="
+        margin-top: 7%;
+        margin-right: 22%;
+        margin-bottom: 7%;
+        margin-left: 22%;
+            background: hsla(0, 0%, 100%, 0.76);
+            backdrop-filter: blur(30px);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        ">
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="fw-bold mb-5  text-center"  style="color:black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >Login</h1>
+          <form #regform="ngForm" (ngSubmit)="logUser(regform)">
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <div class="form-group form-outline">
+                  <label for="exampleInputEmail1">Email</label>
+
+                  <input type="text" 
+                  class="form-control" 
+                  ngModel
+                  id="email" 
+                  name="email"
+                  #email="ngModel"
+                  placeholder="Enter User Email"
+                  (click)="hide()"
+                  required
+                  >
+                  <span *ngIf="email.invalid && email.touched" style="color:brown;">
+                    Plese enter a valid email </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-group form-outline mb-4">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" 
+              class="form-control" 
+              ngModel
+              id="password" 
+              name="password"
+              #password="ngModel"
+              placeholder="Enter User Password"
+              (click)="hide()"
+              >
+            </div>
+            <div class="log" *ngIf="error">
+              Username or Password incorrect!
+             </div>
+            <!-- Submit button -->
+            <div class="col text-center">
+              <button type="submit" class="button btn btn-success btn-lg" style="width: 15%;">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-10 px-md-10 pt-10" style=" margin-top: 2%;" >
+          <h6>Are you a new user ?</h6>
+          <button routerLink="../register" type="submit" class="button btn btn-primary btn-lg" style="width: 13%;">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+<section class="text-center" style="text-transform: capitalize;">
+    <div class="p-5 bg-image background"></div>
+    <div
+      class="card mx-4 mx-md-5 shadow-5-strong"
+      style="
+        margin-top: 7px;
+        
+        background: hsla(0, 16%, 96%, 0.2);
+        backdrop-filter: blur(30px);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      "
+    >
+      <div class="card-body py-5 px-md-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-12">
+           
+            <div class="row">
+               <div class="col md-2"><button type="button" style="color: white;" class="btn btn-outline-primary" (click)="getManagers()">Managers</button></div> 
+               <div class="header"> 
+                Staff Details
+              </div>
+              <div class="col md-2"><button type="button" style="color: white;" class="btn btn-outline-primary" (click)="getStaff()">Staff</button></div>
+        
+          </div>
+            
+              
+      
+      <div class="inside-order" >
+        
+              <table class="table">
+                <thead>
+          
+                  <tr>
+                     <th scope="col">ID</th> 
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                     <th scope="col">Current Role</th>
+                     <th scope="col" >Update to Manager</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <tr *ngFor="let r of result">
+                    <td class="res">{{r.id}}</td>   
+                    <td class="res">{{r.name}}</td>
+                    <td class="res">{{r.email}}</td>
+                    <td class="res">{{r.role}}</td>  
+                    <td *ngIf="r.role!='manager'"><button type="button" style="color: black;" class="btn btn-success" (click)="update_role(r.id)">Update Role</button></td>
+                    <td *ngIf="r.role=='manager'">Already Manager</td>
+                 </tr>
+                </tbody>
+              </table>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

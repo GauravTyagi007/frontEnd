@@ -1,0 +1,40 @@
+.card {display:inline-block;
+    margin: 10px;
+    height: 250px;  
+  }
+    
+    .background{
+        background-image: url("https://img.freepik.com/free-vector/cartoon-indian-restaurant-background_52683-69329.jpg?w=1380&t=st=1663419111~exp=1663419711~hmac=7b10a53750431cc70ddcbf90dd2e38070137ba58e1346c015f738dc6f5e1e9e8");
+        position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 300%;
+    }
+    
+    .clr{
+      background-color: aliceblue;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      
+    }
+    .bttn{
+      background-color:rgb(7, 242, 229);
+      color: black;
+      margin-top: 10px;
+      border-color: black;
+    }
+    .header{
+      background-color:rgb(7, 242, 229);;
+      color: black;
+    }
+    .hov:hover {
+      -ms-transform: scale(0.5); /* IE 9 */
+      -webkit-transform: scale(0.5); /* Safari 3-8 */
+      transform: scale(1.03);
+      border-color: #232f3e;
+      outline-style: solid;
+      opacity: 1;
+    }
+    .opc{
+      opacity: 0.9;
+    }

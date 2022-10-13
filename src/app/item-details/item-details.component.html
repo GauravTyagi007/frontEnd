@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    ITEM-LIST
+  </div>
+  <ul class="list-group list-group-horizontal">
+    <ul *ngFor="let r of res">
+    <li class="list-group-item active" aria-current="true">ITEM ID:{{r.id}}</li>
+    <li class="list-group-item">PRODUCTID:{{r.productId}}</li>
+    <li class="list-group-item">NAME:{{r.name}}</li>
+    <li class="list-group-item">TYPE:{{r.type}}</li>
+    <li class="list-group-item">QUANTITY:{{r.quantity}}</li>
+    <li class="list-group-item">PRICE:{{r.price}}</li>
+    </ul>
+  </ul>
+</div>
+    
+  

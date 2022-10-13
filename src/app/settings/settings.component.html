@@ -1,0 +1,99 @@
+<section class="text-center">
+  <div
+    class="card mx-4 mx-md-5 shadow-5-strong"
+    style="
+      margin-top: 2%;
+      background: hsla(0, 0%, 100%, 0.3);
+      backdrop-filter: blur(30px);
+    "
+  >
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5"  style="color: white;">Update Details</h2>
+
+          <form #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm)">
+            <div class="form-group">
+              <label for="exampleInputEmail1" style="color: white;">User Id</label>
+              <input
+                type="text"
+                class="form-control"
+                ngModel
+                name="id"
+                id="id"
+                #id="ngModel"
+                [(ngModel)]="selectedUser.id"
+                [disabled]="true"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1"  style="color: white;">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                ngModel
+                name="name"
+                id="name"
+                #name="ngModel"
+                [(ngModel)]="selectedUser.name"
+                [disabled]="true"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1"  style="color: white;">Email</label>
+              <input
+              type="text"
+              class="form-control"
+              ngModel
+              name="email"
+              id="email"
+              #email="ngModel"
+              [(ngModel)]="selectedUser.email"
+              [disabled]="true"
+            />
+            </div>
+            <!-- <div class="form-group">
+              <label for="exampleInputPassword1"  style="color: white;">Role</label>
+              <input
+              type="text"
+              class="form-control"
+              ngModel
+              name="role"
+              id="role"
+              #role="ngModel"
+              [(ngModel)]="selectedUser.role"
+              [disabled]="true"
+            /> -->
+            <!-- </div> -->
+            <div class="form-group">
+              <label for="exampleInputPassword1"  style="color: white;">Enter New Password</label>
+              <input
+              type="password"
+              class="form-control"
+              ngModel
+              name="password"
+              id="password"
+              #password="ngModel"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" 
+              required
+              
+            />
+            <span *ngIf="password.invalid && password.touched" style="color:rgb(6, 212, 248);">
+              Plese enter a valid password here</span>
+            </div>
+
+            <button
+              [disabled]="!updateForm.valid"
+              type="submit"
+              class="btn btn-primary"
+            >
+              submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

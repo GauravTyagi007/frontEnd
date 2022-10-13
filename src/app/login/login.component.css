@@ -1,0 +1,21 @@
+.background{
+    background-image: url("../images/pexels-tirachard-kumtanom-450055.jpg");
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+      background-repeat: round;
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height:100vh;  
+    
+}
+.log{
+  color: red;
+  font-size: large;
+  font-style: normal;
+}

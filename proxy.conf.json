@@ -1,0 +1,12 @@
+{
+
+
+  "/serve/*": {
+    "target": "http://localhost:8080",
+    "pathRewrite": { "^/serve": "" },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+
+}
